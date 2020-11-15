@@ -1,0 +1,129 @@
+body {
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.dice {
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+    
+    background-color: aliceblue;
+    margin: 2px;
+}
+.dice:hover {
+    background-color: cyan;
+}
+
+.dice:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.end-game {
+    animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+    0% {background-color: red;}
+    50% {background-color: aliceblue;}
+    100% {background-color: red;}
+  }
+/* 
+more letter images here:
+https://www.onlygfx.com/6-set-stamp-fonts-png-transparent-svg/ 
+
+
+
+/$$       /$$$$$$$$ /$$$$$$$$ /$$$$$$$$ /$$$$$$$$ /$$$$$$$   /$$$$$$ 
+| $$      | $$_____/|__  $$__/|__  $$__/| $$_____/| $$__  $$ /$$__  $$
+| $$      | $$         | $$      | $$   | $$      | $$  \ $$| $$  \__/
+| $$      | $$$$$      | $$      | $$   | $$$$$   | $$$$$$$/|  $$$$$$ 
+| $$      | $$__/      | $$      | $$   | $$__/   | $$__  $$ \____  $$
+| $$      | $$         | $$      | $$   | $$      | $$  \ $$ /$$  \ $$
+| $$$$$$$$| $$$$$$$$   | $$      | $$   | $$$$$$$$| $$  | $$|  $$$$$$/
+|________/|________/   |__/      |__/   |________/|__/  |__/ \______/ 
+                                                                                                                                         
+*/
+                                                                    
+.A {
+    background-image: url("../images/letters/a.png");
+}
+.B {
+    background-image: url("../images/letters/b.png");
+}
+.C {
+    background-image: url("../images/letters/c.png");
+}
+.D {
+    background-image: url("../images/letters/d.png");
+}
+.E {
+    background-image: url("../images/letters/e.png");
+}
+.F {
+    background-image: url("../images/letters/f.png");
+}
+.G {
+    background-image: url("../images/letters/g.png");
+}
+.H {
+    background-image: url("../images/letters/h.png");
+}
+.I {
+    background-image: url("../images/letters/i.png");
+}
+.J {
+    background-image: url("../images/letters/j.png");
+}
+.K {
+    background-image: url("../images/letters/k.png");
+}
+.L {
+    background-image: url("../images/letters/l.png");
+}
+.M {
+    background-image: url("../images/letters/m.png");
+}
+.N {
+    background-image: url("../images/letters/n.png");
+}
+.O {
+    background-image: url("../images/letters/o.png");
+}
+.P {
+    background-image: url("../images/letters/p.png");
+}
+.Q {
+    background-image: url("../images/letters/q.png");
+}
+.R {
+    background-image: url("../images/letters/r.png");
+}
+.S {
+    background-image: url("../images/letters/s.png");
+}
+.T {
+    background-image: url("../images/letters/t.png");
+}
+.U {
+    background-image: url("../images/letters/u.png");
+}
+.V {
+    background-image: url("../images/letters/v.png");
+}
+.X {
+    background-image: url("../images/letters/x.png");
+}
+.Y {
+    background-image: url("../images/letters/y.png");
+}
+.Z {
+    background-image: url("../images/letters/z.png");
+}
