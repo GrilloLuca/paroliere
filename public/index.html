@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="css/bulma.css">
         <link rel="stylesheet" href="css/style.css">
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="js/moment.js" async defer></script>
 
     </head>
     <body>
@@ -86,7 +85,33 @@
             
         </section>
 
-        <script src="js/moment.js" async defer></script>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+        <script>
+
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDkEPOh5DmLWXSuJpr6L7_W55AD31YNjZE",
+            authDomain: "paroliere.firebaseapp.com",
+            databaseURL: "https://paroliere.firebaseio.com",
+            projectId: "paroliere",
+            storageBucket: "paroliere.appspot.com",
+            messagingSenderId: "882612743109",
+            appId: "1:882612743109:web:648739b0cee9fbe919f9ac"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        </script>
+        <script src="js/database.js" async defer></script>
         <script src="js/script.js" async defer></script>
+
     </body>
 </html>
