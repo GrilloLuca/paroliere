@@ -9,11 +9,13 @@ const endGameAudio = new Audio('sounds/end_game.mp3')
 const countdownAudio = new Audio('sounds/countdown.mp3')
 const zeroAudio = new Audio('sounds/zero.mp3')
 const rollDiceAudio = new Audio('sounds/roll_dice.mp3')
+var selected = []
 
 var rollDice = () => {
 
     btnRoll.disabled = true
     timerArr = []
+    selected = []
     letters.sort(() => 0.5 - Math.random())
     dice.forEach(spin)
 
@@ -23,6 +25,8 @@ var rollDice = () => {
             clearInterval(val)
         })
         btnRoll.disabled = false
+    
+        writeWord(selected)
         startCounter()
 
     }, 1000)
@@ -31,17 +35,24 @@ var rollDice = () => {
 var spin = (value, index) => {
     
     rollDiceAudio.play()
-    var id = setInterval(() => {
-
-        var rand = parseInt(Math.random() * 6)
-        var letter = letters[index][rand]
-        value.className = `column dice ${letter}`
-
-    }, 100)
-
-    timerArr.push(id)
-
+    // timerArr.push(
+    //     setInterval(() => randomLetter(value, index), 100)
+    // )
+    
+    selected.push(randomLetter(value, index))
 }
+
+var randomLetter = (value, index) => {
+    var letter = letters[index][parseInt(Math.random() * 6)]
+    value.className = `column dice ${letter}`
+    return letter
+}
+
+
+readWord(snapshot => snapshot.word.forEach((letter, i) => {
+    dice[i].className = `column dice ${letter}`
+    startCounter()
+}))
 
 var startCounter = () => {
 
