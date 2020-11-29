@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/style.css">
 
         <script src="js/moment.js" async defer></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
     </head>
     <body>
@@ -47,18 +48,58 @@
                         <div class="column dice E"></div>
                     </div>
                 </div>
-                <div class="column is-one-quarter">
+                <div class="column is-half-desktop">
                     <div class="card">
-                        <footer class="card-footer">
-                            <p class="card-footer-item">
-                              <button class="button is-large" id="btnRoll" onclick="rollDice()">Let's roll!</button>
-                            </p>
-                            <p class="card-footer-item">
-                              <span class="tag is-large is-white" id="labelTimer"></span>
-                            </p>
-                          </footer>
+                          
                         <div class="card-content">
-                            Ogni parola trovata va convertita in punti secondo il seguente sistema:
+
+                            <div class="columns">
+                                <div class="column is-half">
+                                    <button class="button is-large is-fullwidth" id="btnRoll" onclick="rollDice()">Let's roll!</button>
+                                </div>
+                                <div class="column is-half">
+                                    <span class="tag is-large is-white is-fullwidth" id="labelTimer"></span>
+                                </div>
+                            </div>
+
+
+                            <div id="layoutPlayerName" class="">
+                                <div class="field has-addons">
+                                    <div class="control has-icons-left has-icons-right">
+                                        <input id="inputPlayerName" class="input is-success" type="text" placeholder="Please enter your name" value="">
+                                        <span class="icon is-small is-left">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        <span class="icon is-small is-right">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-primary" onclick="submitUsername()">Play</button>
+                                    </div>
+                                    <p id="labelPlayerWarning" class="help is-success"></p>
+                                </div>
+                            </div>
+
+                            <div  id="layoutInsertWord" class="is-hidden">
+                                <div class="field has-addons">
+                                    <div class="control">
+                                        <input id="input" class="input" type="text" placeholder="insert a word">
+                                    </div>
+                                    <div class="control">
+                                        <a id="btnInsert" onclick="addWord()" class="button is-info">
+                                            Insert
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <ul id="wordList"></ul>
+                            </div>
+
+                            <hr>
+
+                            Ciao <span class="has-text-weight-bold" id="playerLabel"></span> ogni parola trovata va convertita in punti secondo il seguente sistema:
                             <div class="content">
                                 <ul>
                                     <li>4 lettere si ottiene 1 punto</li>
@@ -69,17 +110,10 @@
                                 </ul>
                             </div>
                             <b>Le parole ripetute, ossia quelle scritte da due o più giocatori, vanno cancellate, valgono quindi 0 punti.</b>
-                        </div>
-                        
-                      </div>
-
-                    <div class="field">
-                        <p class="control">
-                        </p>
-                        <p class="control is-expanded">
                             
-                        </p>
-                      </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             
@@ -112,6 +146,7 @@
         </script>
         <script src="js/database.js" async defer></script>
         <script src="js/script.js" async defer></script>
+        <script src="js/login.js" async defer></script>
 
     </body>
 </html>
