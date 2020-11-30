@@ -32,3 +32,7 @@ function dbGetPlayers(callback) {
         callback(snapshot.val())
     })
 }
+
+function dbDeletePlayers() {
+    firebase.database().ref(`players`).set({})
+}

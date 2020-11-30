@@ -12,13 +12,17 @@ var submitUsername = () => {
     // check if username exists
     dbGetPlayers(players => {
         
+        var error = ''
         var player = inputPlayerName.value
 
-        if(players && players[player]) {
-            labelWarning.innerHTML = 'player name already exixts'
+        if(players && players[player]) error = 'player name already exixts'
+        if(player.length < 2) error = 'player name too short'
+
+        if(error != '') {
+            labelWarning.innerHTML = error
             labelWarning.className = "help is-danger"
             return
-        } 
+        }
     
         playerLabel.innerHTML = player
         // close modal

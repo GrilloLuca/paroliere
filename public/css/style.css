@@ -17,6 +17,13 @@ body {
     margin: 2px;
 }
 .dice:hover {
+    background-color: rgb(223, 240, 255);
+}
+.dice.light {
+    background-color: rgb(223, 240, 255);
+}
+
+.dice.selected {
     background-color: cyan;
 }
 

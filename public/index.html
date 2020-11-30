@@ -75,10 +75,11 @@
                                         </span>
                                     </div>
                                     <div class="control">
-                                        <button class="button is-primary" onclick="submitUsername()">Play</button>
+                                        <button class="button is-info" onclick="submitUsername()">Play</button>
                                     </div>
-                                    <p id="labelPlayerWarning" class="help is-success"></p>
                                 </div>
+                                <p id="labelPlayerWarning" class="help is-success"></p>
+
                             </div>
 
                             <div  id="layoutInsertWord" class="is-hidden">
@@ -87,9 +88,10 @@
                                         <input id="input" class="input" type="text" placeholder="insert a word">
                                     </div>
                                     <div class="control">
-                                        <a id="btnInsert" onclick="addWord()" class="button is-info">
-                                            Insert
-                                        </a>
+                                        <button class="button is-success" id="btnInsert" onclick="addWord()">Insert</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-warning" onclick="cancelWord()">Cancel</button>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +101,7 @@
 
                             <hr>
 
-                            Ciao <span class="has-text-weight-bold" id="playerLabel"></span> ogni parola trovata va convertita in punti secondo il seguente sistema:
+                            Ciao <span class="has-text-weight-bold" id="playerLabel"></span>, ogni parola trovata va convertita in punti secondo il seguente sistema:
                             <div class="content">
                                 <ul>
                                     <li>4 lettere si ottiene 1 punto</li>
@@ -144,6 +146,7 @@
         firebase.initializeApp(firebaseConfig);
 
         </script>
+        <script src="js/utils.js" async defer></script>
         <script src="js/database.js" async defer></script>
         <script src="js/script.js" async defer></script>
         <script src="js/login.js" async defer></script>
